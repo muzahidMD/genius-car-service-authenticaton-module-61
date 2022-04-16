@@ -7,7 +7,7 @@ import auth from '../../../firebase.init';
 import logo from '../../../images/logo-black.png'
 
 const Header = () => {
-    const { user } = useAuthState(auth);
+    const [ user ] = useAuthState(auth);
     const handleSignOut = () => {
         signOut(auth);
     }
